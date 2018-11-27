@@ -41,15 +41,20 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onToggleTodo: (id) => {
-            dispatch(toggleTodo(id))
-        },
-        onRemoveTodo: (id) => {
-            dispatch(removeTodo(id))
-        }
-    }
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         onToggleTodo: (id) => {
+//             dispatch(toggleTodo(id))
+//         },
+//         onRemoveTodo: (id) => {
+//             dispatch(removeTodo(id))
+//         }
+//     }
+// }
+
+const mapDispatchToProps = {
+    onToggleTodo: toggleTodo,
+    onRemoveTodo: removeTodo
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList)
